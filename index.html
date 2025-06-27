@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shop SOP Access</title>
+      <style>
+          body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+          input, button { padding: 10px; margin: 10px; font-size: 16px; }
+          #sops { display: none; }
+          a { color: blue; font-size: 16px; }
+      </style>
+  </head>
+  <body>
+      <div id="login">
+          <h1>Enter Password</h1>
+          <input type="password" id="pass" placeholder="Password">
+          <button onclick="checkPass()">Go</button>
+      </div>
+      <div id="sops">
+          <h1>Shop SOPs</h1>
+          <p>Browse to your SOP: <a href="https://1drv.ms/f/s!xxxxxxxxxxx" target="_blank">Shop SOP Folder</a></p>
+      </div>
+      <script>
+          const correctPass = "LineSOP2025"; // CHANGE THIS to your password, e.g., "Shop123"
+          function checkPass() {
+              if (document.getElementById('pass').value === correctPass) {
+                  document.getElementById('login').style.display = 'none';
+                  document.getElementById('sops').style.display = 'block';
+              } else {
+                  alert('Wrong password!');
+              }
+          }
+      </script>
+  </body>
+  </html>
